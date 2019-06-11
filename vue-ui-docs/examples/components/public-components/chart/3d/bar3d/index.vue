@@ -1,18 +1,18 @@
 
 <template>
     <div>
-        <div :id="id" :style="{width: '100%', height: '500px'}"></div>
+      <div :id="id" :style="{width: '100%', height: '500px'}"></div>
     </div>
 </template>
 
 <script>
 import Vue from 'vue'
-import echarts from 'echarts'
+// import echarts from 'echarts'
 import 'echarts-gl'
 import uuidv4 from 'uuid/v4'
 
 const uuid = uuidv4()
-Vue.prototype.$echarts = echarts 
+// Vue.prototype.$echarts = echarts 
 export default {
   name: 'Bar3d',
   data () {

@@ -21,6 +21,9 @@ const webpackConfig = merge(baseWebpackConfig, {
       usePostCSS: true
     })
   },
+  externals: {
+      "echarts": "echarts",
+  },
   entry: {
     app: './examples/pc-docs/main.js',
   },
