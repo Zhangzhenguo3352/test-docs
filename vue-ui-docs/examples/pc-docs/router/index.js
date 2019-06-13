@@ -80,6 +80,11 @@ export default new Router({
       component: r => require.ensure([], () => r(require('../docs/steps.md')))
     },
     {
+      path: '/message',
+      name: 'message',
+      component: r => require.ensure([], () => r(require('../docs/message.md')))
+    },
+    {
       path: '*',
       name: 'home',
       component: r => require.ensure([], () => r(require('../docs/home.md')))

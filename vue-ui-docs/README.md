@@ -1,6 +1,12 @@
-## 文档 <http://www.zhangzhenguo1.com/>
+### 文档 <http://www.zhangzhenguo1.com/>
 
-## vue vo-vi组件
+## vue vo-ui组件
+- . ✨创建时间 2019.6
+  -  1.1.9
+>添加了 全局提示组件
+
+**全局提示组件 可以在请求的时候 动态的显示  message**  
+
 
 - . ✨创建时间 2019.3
   -  1.1.0

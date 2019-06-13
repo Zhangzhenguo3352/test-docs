@@ -2,10 +2,15 @@
 
 > 基础用法
 
-:::demo ### 使用第三方 方式实现
+:::demo ### 使用第三方 方式实现 , 建议使用 script 引用  
+```
+script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts.min.js"
+```
 
 
 ```html
+
+
 <template>
     <category
         :title="title"

@@ -1,0 +1,97 @@
+// // 进入的过程
+// .t-translate-enter,.t-translate-leave-active{
+//     transition: all .6s;
+// }
+// .t-translate-enter,.t-translate-leave-to{
+//     // 进入的时候是什么样式
+//     transform: scale(2);
+// }
+
+// // 离开过程
+// .t-translate-leave,.t-translate-enter-active{
+//     transition: all .3s;
+// }
+// .t-translate-leave,.t-translate-enter-to{
+//     // 离开是什么样式
+//     transform: scale(1)
+// }
+
+// 进入的过程
+.t-translate-enter-active,.t-translate-leave-active{
+    opacity: 1;
+    transition: all .6s;
+}
+.t-translate-enter,.t-translate-leave-to{
+    opacity: 0;
+    // 进入的时候是什么样式
+    transform: scale(0);
+}
+
+// 离开过程
+.t-translate-enter,.t-translate-leave-active{
+    
+    opacity: 0;
+    // 进入的时候是什么样式
+    transform: scale(5);
+}
+.t-translate-leave-active,.t-translate-enter-active{
+    // 离开是什么样式
+    transition: all .3s;
+}
+
+// 进入的过程
+.t-translate2-enter-active,.t-translate2-leave-active{
+    opacity: 1;
+    transition: all .6s;
+}
+.t-translate2-enter,.t-translate2-leave-to{
+    opacity: 0;
+    // 进入的时候是什么样式
+    transform: scale(3);
+}
+
+// 离开过程
+.t-translate2-enter,.t-translate2-leave-active{
+    
+    opacity: 0;
+    // 进入的时候是什么样式
+    transform: scale(0);
+}
+.t-translate2-leave-active,.t-translate2-enter-active{
+    // 离开是什么样式
+    transition: all .3s;
+}
+
+
+.vux-dialog-enter-active {
+    animation: vux-dialog-in .5s;
+  }
+  .vux-dialog-leave-active {
+    animation: vux-dialog-out .3s;
+  }
+  @keyframes vux-dialog-in {
+    0% {
+      transform:translate(0px, -100px);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      transform: translate(0px, 0);
+      opacity: 1;
+    }
+  }
+  @keyframes vux-dialog-out {
+    0% {
+      transform:translate(0px, 0);
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0px, -100px);
+      opacity: 0;
+    }
+  }

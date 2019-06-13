@@ -8,6 +8,7 @@
       </div>
       <div class="main-header-title">vo-ui</div>
       <ul class="main-header-nav">
+        
         <li class="active">组件</li>
       </ul>
     </div>
@@ -60,6 +61,9 @@
           
           <li>
             <router-link to="/steps">steps 步骤条</router-link>
+          </li>
+          <li>
+            <router-link to="/message">message 全局提示</router-link>
           </li>
           
         </ul>
