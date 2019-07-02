@@ -3,7 +3,6 @@
     <transition name="vux-dialog">
         <div class="modal" v-if="show">
             <div class="content">
-                
                 <div class="header" v-if="titles">
                     <div class="title-box">
                         <p>{{titles}}</p>

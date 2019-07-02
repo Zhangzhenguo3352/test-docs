@@ -3,19 +3,23 @@
 
       
 
-     
-
-      <!-- LazyLoad 懒加载组件  start-->
-      <coms title="LazyLoad 懒加载组件">
-        <lazy-load/>
+      <!-- message 全局提示组件  start-->
+      <coms title="message 全局提示组件">
+        <button-component @click.native="infoMessage">info 普通提示</button-component>
+        <button-component @click.native="successMessage">success 成功</button-component>
+        <button-component @click.native="errorMessage">error 失败</button-component>
+        <button-component @click.native="warningMessage">warning 警告</button-component>
+        <!-- <div class="dync mount">dyncMount root</div> -->
       </coms>
-      <!-- LazyLoad  end -->
+      <!-- message 全局提示组件  end -->
 
       
     </div>
 </template>
 <script>
 import Coms from './coms'
+
+
 
 import ButtonComponent from '../../../components/pc-and-docs/button'
 // import GridComponent from '../../../components/public-components/grid'
@@ -33,7 +37,7 @@ import {bar3dData} from '../../../components/data'
 import Steps from '../../../components/public-components/steps'
 import { Modal } from '../../../components/public-components/modal/index.js'
 import MaskComponent from '../../../components/public-components/mask'
-import LazyLoad from '../../../components/public-components/lazy-load'
+import Message from '../../../components/public-components/message/index'
 export default {
     name: 'checkbox',
     data() {
@@ -107,69 +111,81 @@ export default {
       Steps,  // 步骤条组价
       Modal,
       MaskComponent,
-      LazyLoad, // 懒加载组件
       
     },
     methods: {
-		xonChange(e) {
-			this.checkboxType = e
-		},
-		// 初始化 数也放在它的身上
-		xonChangeC(type, e) {
-			console.log('e', e)
-			let checkoutNumber = `checkout00${type}`
-			this[checkoutNumber] = e.codes
-		},
-		tabChangeFn() {
+      xonChange(e) {
+        this.checkboxType = e
+      },
+      // 初始化 数也放在它的身上
+      xonChangeC(type, e) {
+        console.log('e', e)
+        let checkoutNumber = `checkout00${type}`
+        this[checkoutNumber] = e.codes
+      },
+      tabChangeFn() {
 
-		},
-		// switch 开关事件
-		switchChange(e) {
-			this.checkedType = !e
-		},
-		// 初始化给的 开关数据
-		switchInitData(e) {
-			this.checkedType = e
-		},
+      },
+      // switch 开关事件
+      switchChange(e) {
+        this.checkedType = !e
+      },
+      // 初始化给的 开关数据
+      switchInitData(e) {
+        this.checkedType = e
+      },
 
-		// 动画事件
-		switchAnimationChange(e) {
-			this.checkedAnimationType = !e;
-		},
-		switchInitDataAnim(e) {
-			this.checkedAnimationType = e
-		},
-		// 鼠标移入 某个动画元素
-		animatedOneEnterFn(e) {
-			this.animatedOne = e
-		},
-		// 鼠标移除 某个动画元素关闭动画
-		animatedOneOverFn() {
-			this.animatedOne = -1
-		},
+      // 动画事件
+      switchAnimationChange(e) {
+        this.checkedAnimationType = !e;
+      },
+      switchInitDataAnim(e) {
+        this.checkedAnimationType = e
+      },
+      // 鼠标移入 某个动画元素
+      animatedOneEnterFn(e) {
+        this.animatedOne = e
+      },
+      // 鼠标移除 某个动画元素关闭动画
+      animatedOneOverFn() {
+        this.animatedOne = -1
+      },
 
-		// 步骤条事件
-		next () {
-			if (this.index < 2) {
-				this.index += 1
-			} else {
-				this.index = 0
-			}
-		},
+      // 步骤条事件
+      next () {
+        if (this.index < 2) {
+          this.index += 1
+        } else {
+          this.index = 0
+        }
+      },
 
-		selectModal() {
-			this.showModal = !this.showModal
-		},
-		onOk() { // modal 确定
-			console.log('modal 确定')
-			setTimeout(() => {
-				this.showModal = false
-			}, 1000)
-		},
-		onCancelfn() { // 关闭 || 取消modal 组件
-			this.showModal = false
-		}
+      selectModal() {
+        this.showModal = !this.showModal
+      },
+      onOk() { // modal 确定
+        console.log('modal 确定')
+        setTimeout(() => {
+          this.showModal = false
+        }, 1000)
+      },
+      onCancelfn() { // 关闭 || 取消modal 组件
+        this.showModal = false
+      },
 
+      // 全局提示 
+      infoMessage() {
+        Message.info( 'This is a normal info', 0.5)
+      },
+      successMessage() {
+        Message.success('This is a normal success', 2)
+      },
+      errorMessage() {
+        Message.error('This is a normal error', 3)
+      },
+      warningMessage() {
+        Message.warning('This is a normal warning', 4)
+      }
     }
 }
 </script>

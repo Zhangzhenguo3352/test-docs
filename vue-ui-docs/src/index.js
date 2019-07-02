@@ -17,7 +17,9 @@ import {Modal} from '../examples/components/public-components/modal'
 import BackTop from '../examples/components/public-components/back-top'
 import {Category, Bar3d} from '../examples/components/public-components/chart'
 import Steps from '../examples/components/public-components/steps'
+// import Message from '../examples/components/public-components/message/index'
 
+// console.log('info', Message)
 const components = [
   KtButton,
   Loading,
@@ -36,7 +38,7 @@ const components = [
   Modal,
   BackTop,
   Category, Bar3d,
-  Steps
+  Steps,
 
 ]
 

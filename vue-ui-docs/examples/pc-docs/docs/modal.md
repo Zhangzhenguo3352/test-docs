@@ -95,7 +95,6 @@ export default {
 
 | 名称        | 说明          
 | ------------- |:-------------|
-| @click.native | switch 开关事件 |
 | :show-modal | 模态框是否显现 |
 | :on-cancelfn | 取消事件 |
 | :on-okfn | 确认事件 |
