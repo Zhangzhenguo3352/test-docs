@@ -3,41 +3,13 @@
 
       
 
-      <!-- modal对话框组件  start-->
-      <coms title="modal对话框组件">
-        <button-component @click.native="selectModal">show modal</button-component>
-        <!-- <mask-component></mask-component> -->
-        <modal :show-modal="showModal" :on-cancelfn="onCancelfn" :on-okfn="onOk"></modal>
-      </coms>
-      <!-- modal对话框组件  end -->
+     
 
-      <!-- BackTop 返回顶部组件  start-->
-      <coms title="BackTop 返回顶部组件">
-        <back-top :show-oneself-top="showOneselfTop" :top-size="topSize"><icon-component type="fanhuidingbu1" ></icon-component></back-top><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <!-- LazyLoad 懒加载组件  start-->
+      <coms title="LazyLoad 懒加载组件">
+        <lazy-load/>
       </coms>
-      <!-- BackTop 返回顶部组件  end -->
-
-      <!-- chart 图标组件  start-->
-      <coms title="chart 图标组件">
-        <category
-          :title="title"
-          :x-axis-data="xAxisData"
-          :series-data="seriesData"
-        ></category>
-        <bar3d :bar3d-data="bar3dData"></bar3d>
-      </coms>
-      <!-- chart 图标组件  end -->
-
-
-      <!-- steps 步骤条组件  start-->
-      <coms title="steps 步骤条组件">
-        <Steps :items="items" :activeIndex='index'/>
-        <br>
-        <button @click="next">下一步</button>
-      </coms>
-      <!-- steps步骤条组件  end -->
+      <!-- LazyLoad  end -->
 
       
     </div>
@@ -61,6 +33,7 @@ import {bar3dData} from '../../../components/data'
 import Steps from '../../../components/public-components/steps'
 import { Modal } from '../../../components/public-components/modal/index.js'
 import MaskComponent from '../../../components/public-components/mask'
+import LazyLoad from '../../../components/public-components/lazy-load'
 export default {
     name: 'checkbox',
     data() {
@@ -134,6 +107,7 @@ export default {
       Steps,  // 步骤条组价
       Modal,
       MaskComponent,
+      LazyLoad, // 懒加载组件
       
     },
     methods: {

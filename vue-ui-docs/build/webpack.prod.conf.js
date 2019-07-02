@@ -10,6 +10,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
+const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
 
 const env = require('../config/prod.env')
 
@@ -21,6 +23,9 @@ const webpackConfig = merge(baseWebpackConfig, {
       usePostCSS: true
     })
   },
+  // configureWebpack: () => ({
+  //   plugins: [ new VueSSRClientPlugin()]
+  // }),
   externals: {
       "echarts": "echarts",
   },
@@ -121,7 +126,8 @@ const webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    new VueSSRClientPlugin()
   ]
 })
 
